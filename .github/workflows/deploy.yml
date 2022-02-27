@@ -7,13 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Create k8s Kind Cluster
+        uses: helm/kind-action@v1.2.0
       - uses: helmwave/setup-action@v0.2.0
         name: Install helmwave
         with:
           version: "0.18.0"
       - name: plan
-        run: |
-          HELMWAVE_DIFF_MODE=local helmwave build --yml
+        run: helmwave build --yml
       - name: Scan repo with kube-linter
         uses: stackrox/kube-linter-action@v1.0.4
         with:
