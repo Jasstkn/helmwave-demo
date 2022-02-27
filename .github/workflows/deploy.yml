@@ -12,7 +12,9 @@ jobs:
         with:
           version: "0.18.0"
       - name: plan
-        run: helmwave build --diff-mode=local --yml
+        run: |
+          helmwave build --help
+          helmwave build --diff-mode=local --yml
       - name: Scan repo with kube-linter
         uses: stackrox/kube-linter-action@v1.0.4
         with:
