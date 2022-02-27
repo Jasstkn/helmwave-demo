@@ -20,6 +20,7 @@ jobs:
           else
               echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
           fi
+          echo "CI_ENVIRONMENT_NAME is $CI_ENVIRONMENT_NAME"
       - name: plan
         run: helmwave build --yml
       - name: Scan repo with kube-linter
@@ -54,6 +55,7 @@ jobs:
           else
               echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
           fi
+          echo "CI_ENVIRONMENT_NAME is $CI_ENVIRONMENT_NAME"
       - name: plan
         run: helmwave build --yml --diff-mode=local
       - name: deploy
