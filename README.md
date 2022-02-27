@@ -1,5 +1,7 @@
 # helmwave-demo
 
+[![Deploy](https://github.com/Jasstkn/helmwave-demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/Jasstkn/helmwave-demo/actions/workflows/deploy.yml)
+
 This is demo repository for testing helmwave features with enabled CI/CD and multi-environments feature.
 
 ```mermaid
