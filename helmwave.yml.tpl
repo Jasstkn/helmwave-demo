@@ -14,7 +14,7 @@ releases:
     name: charts/{{ $v | get "name" }}
   tags: [{{ $v | get "name" }}]
   values:
-    - envs-values/{{ $v | get "name" }}.yaml
+    - envs-values/{{ requiredEnv "CI_ENVIRONMENT_NAME"}}/{{ $v | get "name" }}.yaml
   <<: *options
 {{ end }}
 {{- end }}

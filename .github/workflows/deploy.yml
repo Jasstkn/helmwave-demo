@@ -13,6 +13,13 @@ jobs:
         name: Install helmwave
         with:
           version: "0.18.0"
+      - name: Set environment for branch
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+              echo "CI_ENVIRONMENT_NAME=prod" >> "$GITHUB_ENV"
+          else
+              echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
+          fi
       - name: plan
         run: helmwave build --yml
       - name: Scan repo with kube-linter
@@ -40,9 +47,14 @@ jobs:
         name: Install helmwave
         with:
           version: "0.18.0"
-      - name: templating helmwave.yml.tpl
-        run: helmwave yml
+      - name: Set environment for branch
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+              echo "CI_ENVIRONMENT_NAME=prod" >> "$GITHUB_ENV"
+          else
+              echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
+          fi
       - name: plan
-        run: helmwave build --diff-mode=local
+        run: helmwave build --yml --diff-mode=local
       - name: deploy
         run: helmwave up --kubedog
