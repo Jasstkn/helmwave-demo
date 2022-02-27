@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
-        "https://json.schemastore.org/github-action.json": "file:///Users/mariak/github/helmwave-demo/.github/deploy.yml"
+        "https://json.schemastore.org/github-action.json": "file:///Users/mariak/github/helmwave-demo/.github/deploy.yml",
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/mariak/github/helmwave-demo/.github/workflows/deploy.yml"
     }
 }
