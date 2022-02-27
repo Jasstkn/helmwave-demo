@@ -1,5 +1,5 @@
 checks:
-  exlucde:
+  exclude:
   - "no-read-only-root-fs"
   - "run-as-non-root"
   - "unset-memory-requirements"
