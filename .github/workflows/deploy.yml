@@ -5,7 +5,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v2
       - name: Create k8s Kind Cluster

@@ -1,0 +1,90 @@
+version: 0.18.0
+
+.options: &options
+  namespace: microservices-demo
+  wait: true
+  timeout: 300s
+  create_namespace: true
+
+releases:
+
+- name: adservice
+  chart:
+    name: charts/adservice
+  tags: [adservice]
+  values:
+    - envs-values/adservice.yaml
+  <<: *options
+
+- name: cartservice
+  chart:
+    name: charts/cartservice
+  tags: [cartservice]
+  values:
+    - envs-values/cartservice.yaml
+  <<: *options
+
+- name: checkoutservice
+  chart:
+    name: charts/checkoutservice
+  tags: [checkoutservice]
+  values:
+    - envs-values/checkoutservice.yaml
+  <<: *options
+
+- name: currencyservice
+  chart:
+    name: charts/currencyservice
+  tags: [currencyservice]
+  values:
+    - envs-values/currencyservice.yaml
+  <<: *options
+
+- name: emailservice
+  chart:
+    name: charts/emailservice
+  tags: [emailservice]
+  values:
+    - envs-values/emailservice.yaml
+  <<: *options
+
+- name: frontend
+  chart:
+    name: charts/frontend
+  tags: [frontend]
+  values:
+    - envs-values/frontend.yaml
+  <<: *options
+
+- name: paymentservice
+  chart:
+    name: charts/paymentservice
+  tags: [paymentservice]
+  values:
+    - envs-values/paymentservice.yaml
+  <<: *options
+
+- name: productcatalogservice
+  chart:
+    name: charts/productcatalogservice
+  tags: [productcatalogservice]
+  values:
+    - envs-values/productcatalogservice.yaml
+  <<: *options
+
+- name: recommendationservice
+  chart:
+    name: charts/recommendationservice
+  tags: [recommendationservice]
+  values:
+    - envs-values/recommendationservice.yaml
+  <<: *options
+
+- name: shippingservice
+  chart:
+    name: charts/shippingservice
+  tags: [shippingservice]
+  values:
+    - envs-values/shippingservice.yaml
+  <<: *options
+

@@ -1,0 +1,6 @@
+checks:
+  exlucde:
+  - "no-read-only-root-fs"
+  - "run-as-non-root"
+  - "unset-memory-requirements"
+  - "unset-cpu-requirements"
