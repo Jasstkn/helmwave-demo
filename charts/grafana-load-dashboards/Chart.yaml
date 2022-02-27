@@ -1,0 +1,7 @@
+apiVersion: v1
+home: https://github.com/express42/helm-charts/
+maintainers:
+- email: nvelgin@express42.com
+  name: Nikita Velgin
+name: grafana-load-dashboards
+version: 0.0.3

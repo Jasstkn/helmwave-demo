@@ -1,0 +1,16 @@
+{{ if .Values.istio.enabled }}
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: productcatalogservice-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 3550
+      name: GRPC
+      protocol: GRPC
+    hosts:
+    - "{{ .Values.ingress.host }}"
+{{ end }}

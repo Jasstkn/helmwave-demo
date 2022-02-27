@@ -1,0 +1,12 @@
+releases:
+  - name: adservice
+  - name: cartservice
+  - name: checkoutservice
+  - name: currencyservice
+  - name: emailservice
+  - name: frontend
+  - name: loadgenerator
+  - name: paymentservice
+  - name: productcatalogservice
+  - name: recommendationservice
+  - name: shippingservice

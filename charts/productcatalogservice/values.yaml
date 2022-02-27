@@ -1,0 +1,9 @@
+image:
+  repository: mariarti/productcatalogservice
+  tag: latest
+
+istio:
+  enabled: false
+
+ingress:
+  host: productcatalogservice.microservices-demo.svc.cluster.local

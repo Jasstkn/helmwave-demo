@@ -1,0 +1,5 @@
+image:
+  repository: mariarti/loadgenerator
+  tag: latest
+ingress:
+  host: frontend

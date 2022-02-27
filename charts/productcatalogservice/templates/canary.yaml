@@ -1,0 +1,33 @@
+{{- if .Values.istio.enabled -}}
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: productcatalogservice
+  namespace: microservices-demo
+spec:
+  provider: istio
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: productcatalogservice
+  progressDeadlineSeconds: 60
+  service:
+    port: 3550
+    targetPort: 3550
+    gateways:
+    - productcatalogservice-gateway
+    hosts:
+    - "{{ .Values.ingress.host }}"
+    trafficPolicy:
+      tls:
+        mode: DISABLE
+  analysis:
+    interval: 30s
+    threshold: 5
+    maxWeight: 30
+    stepWeight: 5
+    metrics:
+    - name: request-success-rate
+      threshold: 99
+      interval: 30s
+{{- end -}}
