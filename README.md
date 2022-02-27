@@ -2,6 +2,15 @@
 
 This is demo repository for testing helmwave features with enabled CI/CD and multi-environments feature.
 
+```mermaid
+graph TB;
+    A[Prepare environment]
+    B[Run tests]
+    C[Deploy]
+    A-->B;
+    B-->C;
+```
+
 ## commands
 
 Generate `helmwave.yml` from template.
