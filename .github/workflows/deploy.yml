@@ -20,10 +20,10 @@ jobs:
         with:
           directory: .helmwave
           config: .kube-linter/config.yaml
-      - name: test
+      - name: Kubeval
         uses: instrumenta/kubeval-action@master
         with:
-          files: .helmwave/manifests/
+          files: .helmwave/manifest/
       - name: Download Pluto
         uses: FairwindsOps/pluto/github-action@master
       - name: Use pluto
