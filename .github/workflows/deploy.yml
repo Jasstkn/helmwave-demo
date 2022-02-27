@@ -19,6 +19,7 @@ jobs:
         uses: stackrox/kube-linter-action@v1.0.4
         with:
           directory: .helmwave
+          config: .kube-linter/config.yaml
       - name: test
         uses: instrumenta/kubeval-action@master
         with:
