@@ -5,7 +5,7 @@ releases:
   - name: currencyservice
   - name: emailservice
   - name: frontend
-  - name: loadgenerator
+  # - name: loadgenerator
   - name: paymentservice
   - name: productcatalogservice
   - name: recommendationservice
