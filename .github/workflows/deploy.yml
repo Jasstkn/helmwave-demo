@@ -18,4 +18,4 @@ jobs:
       - name: plan
         run: helmwave build
       - name: deploy
-        run: helmwave up
+        run: helmwave up --kubedog
