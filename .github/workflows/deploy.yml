@@ -22,6 +22,11 @@ jobs:
       with:
         files: ".helmwave/manifest/*.yml"
         github_token: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Download Pluto
+      uses: FairwindsOps/pluto/github-action@master
+    - name: Use pluto
+      run: |
+        pluto detect-files -d .helmwave/
   deploy:
     runs-on: ubuntu-latest
     needs: test
