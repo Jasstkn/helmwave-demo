@@ -6,9 +6,11 @@ This is demo repository for testing helmwave features with enabled CI/CD and mul
 graph TB;
     A[Prepare environment]
     B[Run tests]
-    C[Deploy]
-    A-->B;
-    B-->C;
+    C[Deploy to prod]
+    D[Deploy to stage]
+    A---->B;
+    B--is branch master?-->C;
+    B--is branch not master?-->D;
 ```
 
 ## commands
