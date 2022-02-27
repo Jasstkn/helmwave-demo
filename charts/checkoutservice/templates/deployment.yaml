@@ -39,10 +39,10 @@ spec:
             value: "cartservice:7070"
           - name: JAEGER_SERVICE_ADDR
             value: "jaeger-collector.observability.svc.cluster.local:14268"
-          resources:
-            requests:
-              cpu: 100m
-              memory: 64Mi
-            limits:
-              cpu: 200m
-              memory: 128Mi
+          # resources:
+          #   requests:
+          #     cpu: 100m
+          #     memory: 64Mi
+          #   limits:
+          #     cpu: 200m
+          #     memory: 128Mi

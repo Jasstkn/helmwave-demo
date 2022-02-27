@@ -34,10 +34,10 @@ spec:
           value: "1"
         - name: DISABLE_PROFILER
           value: "1"
-        resources:
-          requests:
-            cpu: 100m
-            memory: 220Mi
-          limits:
-            cpu: 200m
-            memory: 450Mi
+        # resources:
+        #   requests:
+        #     cpu: 100m
+        #     memory: 220Mi
+        #   limits:
+        #     cpu: 200m
+        #     memory: 450Mi
