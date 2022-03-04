@@ -3,3 +3,9 @@
 
 *.yaml linguist-detectable=true 
 *.yaml linguist-language=YAML
+
+*.yaml.tpl linguist-detectable=true 
+*.yaml.tpl linguist-language=YAML
+
+*.yml.tpl linguist-detectable=true 
+*.yml.tpl linguist-language=YAML
