@@ -48,7 +48,7 @@ jobs:
       - uses: helmwave/setup-action@v0.2.0
         name: Install helmwave
         with:
-          version: "0.18.0"
+          version: "0.19.5"
       - name: Set environment for branch
         run: |
           if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
