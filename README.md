@@ -11,8 +11,8 @@ graph TB;
     C[Deploy to prod]
     D[Deploy to stage]
     A---->B;
-    B--is branch master?-->C;
-    B--is branch not master?-->D;
+    B--is branch main?-->C;
+    B--is branch not main?-->D;
 ```
 
 ## commands
