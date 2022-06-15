@@ -15,7 +15,7 @@ jobs:
           version: "0.19.5"
       - name: Set environment for branch
         run: |
-          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
               echo "CI_ENVIRONMENT_NAME=prod" >> "$GITHUB_ENV"
           else
               echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
@@ -51,7 +51,7 @@ jobs:
           version: "0.19.5"
       - name: Set environment for branch
         run: |
-          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
               echo "CI_ENVIRONMENT_NAME=prod" >> "$GITHUB_ENV"
           else
               echo "CI_ENVIRONMENT_NAME=stage" >> "$GITHUB_ENV"
